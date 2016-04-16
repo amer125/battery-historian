@@ -658,10 +658,6 @@ class LegacyFormatConverter(object):
           break
     fileinput.close()
 
-    if not self._end_time:
-      print "cannot find end time"
-      sys.exit(1)
-
     for line in fileinput.input(input_file):
       if not history_start and line.startswith("Battery History"):
         history_start = True
